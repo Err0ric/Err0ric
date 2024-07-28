@@ -75,3 +75,17 @@
 </div>
 
 <br/>
+
+<details>
+
+  <summary>↕️ <bold>Cryptocurrency List</bold></summary>
+ 
+ <br />
+
+| Currency          | Wallet Address                                                                                               |
+|-------------------|--------------------------------------------------------------------------------------------------------------|
+| Bitcoin (BTC)     | 35vgCnx9FGBGTxCNE19zV8uJJBDyWcZTHF                                                                           |
+| Ethereum (ETH)    | 0x9EC433d5ef2E3f5907e8a23706150a55562f6F24                                                                   |
+
+
+</details>
