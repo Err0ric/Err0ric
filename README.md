@@ -35,8 +35,8 @@
 <h2 align="center">⚒️ Skills ⚒️</h2>
 <br/>
 <div align="center">
-    <img src="https://skillicons.dev/icons?i=apple,discord,arch,debian,elasticsearch,vscode,github,gitlab,grafana,kali,obsidian" />
-    <img src="https://skillicons.dev/icons?i=windows,python,raspberrypi,docker,ai" /><br>
+    <img src="https://skillicons.dev/icons?i=apple,discord,arch,debian,elasticsearch,vscode,github,gitlab,grafana" />
+    <img src="https://skillicons.dev/icons?i=windows,python,raspberrypi,docker,ai,kali,obsidian" /><br>
 </div>
 
 <div align="center">
