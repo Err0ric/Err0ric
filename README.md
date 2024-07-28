@@ -39,6 +39,10 @@
     <img src="https://skillicons.dev/icons?i=nodejs,python,raspberrypi,docker,ai" /><br>
 </div>
 
+<div align="center">
+     <img src="https://tryhackme-badges.s3.amazonaws.com/Err0ric.png" alt="TryHackMe">
+</div>
+
 <br/>
 <hr/>
 
