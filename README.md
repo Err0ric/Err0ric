@@ -12,7 +12,7 @@
  
  🔭 I’m currently working my bachelors in Cybersecurity
  
- 🌱 I’m currently learning **SQL, OSINT, Cyber Defense**
+ 🌱 I’m currently learning **SQL, OSINT, Cyber Defense, Threat Hunting**
 
 ⚡ DC253 | #Wardriving
 
