@@ -28,6 +28,9 @@
   <a href="https://Err0ric.github.io" target="_blank">
      <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white" target="_blank" /> <!-- sqlite, safari, google-chrome are other good icon options -->
   </a>
+    <div align="center">
+     <img src="https://tryhackme-badges.s3.amazonaws.com/Err0ric.png" alt="TryHackMe">
+</div>
 </div>
 
  <hr/>
@@ -37,10 +40,6 @@
 <div align="center">
     <img src="https://skillicons.dev/icons?i=apple,discord,arch,debian,elasticsearch,vscode,github,gitlab,grafana" />
     <img src="https://skillicons.dev/icons?i=windows,python,raspberrypi,docker,ai,kali,obsidian" /><br>
-</div>
-
-<div align="center">
-     <img src="https://tryhackme-badges.s3.amazonaws.com/Err0ric.png" alt="TryHackMe">
 </div>
 
 <br/>
