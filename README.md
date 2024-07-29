@@ -10,11 +10,11 @@
 
 <div align="center">
  
- 🔭 I’m currently working my bachelors in Cybersecurity
+ :lock: I’m currently working my bachelors in Cybersecurity
  
- 🌱 I’m currently learning **OSINT, Endpoint Security, Threat Hunting, Incident Response **
+ :floppy_disk: Currently learning OSINT, Endpoint Security, Threat Hunting, Incident Response 
 
-⚡ DC253 | #Wardriving
+:red_circle: DC253 :skull: | #Wardriving :satellite:
 
  </div>
  
