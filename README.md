@@ -10,7 +10,7 @@
 
 <div align="center">
  
- :lock: I’m currently working my bachelors in Cybersecurity
+ :lock: I’m working my bachelors in Cybersecurity
  
  :floppy_disk: Currently learning OSINT, Endpoint Security, Threat Hunting, Incident Response 
 
