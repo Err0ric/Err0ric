@@ -1,13 +1,11 @@
 <img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=Err0ric.Err0ric" />
 <h1 align="center">
-    <img src="https://readme-typing-svg.herokuapp.com/?font=Orbitron&size=40&center=true&vCenter=true&width=500&height=70&duration=4500&color=BF40FF&lines=∩(˵☯‿☯˵)つ¤=[]:::::>;+I+am+Err0ric!;" />
+    <img src="https://readme-typing-svg.herokuapp.com/?font=Orbitron&size=40&center=true&vCenter=true&width=500&height=70&duration=4500&color=BF40FF&lines=Err0ric;Cybersecurity+Professional;OSINT+%7C+Threat+Hunting;Telecom+Security" />
 </h1>
 <h3 align="center">Cybersecurity Professional | Telecom Security</h3>
 <br/>
 <div align="center">
-:lock: Cybersecurity Lead | B.S. Cybersecurity (WGU)
-:satellite: OSINT | Endpoint Security | Threat Hunting | Incident Response | Cloud Security
-:red_circle: DC253 :skull: | #Wardriving :satellite:
+Cybersecurity Lead | B.S. Cybersecurity (WGU) | OSINT | Endpoint Security | Threat Hunting | Incident Response | Cloud Security | DC253 | #Wardriving
 </div>
 <div align="center"> 
   <a href="mailto:Err0ric@proton.me">
@@ -28,7 +26,7 @@
   <img src="https://tryhackme-badges.s3.amazonaws.com/Err0ric.png" alt="TryHackMe">
 </div>
 <hr/>
-<h2 align="center">⚒️ Skills & Tools ⚒️</h2>
+<h2 align="center">🛠️ Skills & Tools</h2>
 <br/>
 <div align="center">
     <img src="https://skillicons.dev/icons?i=linux,arch,debian,kali,windows,apple&theme=dark" />
@@ -40,7 +38,7 @@
 <br/>
 <hr/>
 <div align="center">
-  <h2>🐍 My Contributions 🐍</h2>
+  <h2>🐍 My Contributions</h2>
   <br>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Err0ric/Err0ric/output/github-contribution-grid-snake-dark.svg" />
@@ -50,7 +48,7 @@
   <br/><br/><br/>
 </div>
 <hr/>
-<h2 align="center">⚡ Stats ⚡</h2>
+<h2 align="center">⚡ Stats</h2>
 <br>
 <div align="center">
   <img width=390 src="https://github-readme-stats.vercel.app/api?username=Err0ric&count_private=true&show_icons=true&theme=midnight-purple&rank_icon=github&border_radius=10" alt="readme stats" />
