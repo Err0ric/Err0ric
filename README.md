@@ -1,6 +1,6 @@
 <img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=Err0ric.Err0ric" />
 <h1 align="center">
-    <img src="https://readme-typing-svg.herokuapp.com/?font=Orbitron&size=40&center=true&vCenter=true&width=500&height=70&duration=4500&color=BF40FF&lines=Err0ric;Cybersecurity+Professional;OSINT+%7C+Threat+Hunting;Telecom+Security" />
+    <img src="https://readme-typing-svg.herokuapp.com/?font=Orbitron&size=40&center=true&vCenter=true&width=500&height=70&duration=4500&color=BF40FF&lines=Err0ric" />
 </h1>
 <h3 align="center">Cybersecurity Professional | Telecom Security</h3>
 <br/>
