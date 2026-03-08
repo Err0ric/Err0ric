@@ -5,24 +5,24 @@
 <br/>
 
 ## 👾 About Me
-```python
-profile = {
-    "name":       "Eric Henderson",
-    "handle":     "Err0ric",
-    "location":   "Pacific Northwest, USA",
-    "role":       "Cybersecurity Lead",
-    "education":  ["B.S. Cybersecurity (in progress)"],
-    "building":   "CrawlR — browser-based OSINT platform @ crawlr.lol",
-    "focus": [
-        "OSINT & digital forensics",
-        "Network security & infrastructure hardening",
-        "Security policy & compliance frameworks",
-        "Tool development with Python & FastAPI",
-    ],
-    "currently_learning": ["Claude API", "D3.js", "advanced OSINT tradecraft"],
-    "hobbies": ["building tools nobody asked for", "CTF", "tinkering"],
-}
-```
+<div style="background:#0d0d0d; border:1px solid #7c3aed; border-radius:8px; padding:20px; font-family:monospace; font-size:13px; line-height:1.8;">
+<span style="color:#6d28d9;">profile</span> <span style="color:#ffffff;">= {</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#7c3aed;">"name"</span><span style="color:#ffffff;">:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a78bfa;">"Eric Henderson"</span><span style="color:#ffffff;">,</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#7c3aed;">"handle"</span><span style="color:#ffffff;">:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a78bfa;">"Err0ric"</span><span style="color:#ffffff;">,</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#7c3aed;">"location"</span><span style="color:#ffffff;">:</span>&nbsp;&nbsp;&nbsp;<span style="color:#a78bfa;">"Pacific Northwest, USA"</span><span style="color:#ffffff;">,</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#7c3aed;">"role"</span><span style="color:#ffffff;">:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a78bfa;">"Cybersecurity Lead"</span><span style="color:#ffffff;">,</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#7c3aed;">"education"</span><span style="color:#ffffff;">:</span>&nbsp;&nbsp;<span style="color:#a78bfa;">"B.S. Cybersecurity (in progress)"</span><span style="color:#ffffff;">,</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#7c3aed;">"building"</span><span style="color:#ffffff;">:</span>&nbsp;&nbsp;&nbsp;<span style="color:#a78bfa;">"CrawlR — OSINT platform @ crawlr.lol"</span><span style="color:#ffffff;">,</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#7c3aed;">"focus"</span><span style="color:#ffffff;">: [</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a78bfa;">"OSINT & digital forensics"</span><span style="color:#ffffff;">,</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a78bfa;">"Network security & infrastructure hardening"</span><span style="color:#ffffff;">,</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a78bfa;">"Security policy & compliance frameworks"</span><span style="color:#ffffff;">,</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a78bfa;">"Tool development with Python & FastAPI"</span><span style="color:#ffffff;">,</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ffffff;">],</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#7c3aed;">"currently_learning"</span><span style="color:#ffffff;">:</span> <span style="color:#a78bfa;">["Claude API", "D3.js", "advanced OSINT tradecraft"]</span><span style="color:#ffffff;">,</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#7c3aed;">"hobbies"</span><span style="color:#ffffff;">:</span> <span style="color:#a78bfa;">["building tools nobody asked for", "CTF", "tinkering"]</span><span style="color:#ffffff;">,</span><br>
+<span style="color:#ffffff;">}</span>
+</div>
 
 ---
 
@@ -54,18 +54,13 @@ profile = {
 
 ---
 
-## 📊 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Err0ric&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d0d0d&title_color=7c3aed&icon_color=7c3aed&text_color=ffffff&count_private=true" width="48%"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Err0ric&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d0d0d&title_color=7c3aed&text_color=ffffff&langs_count=6" width="40%"/>
-</p>
-
----
-
 ## 🐍 Contribution Snake
 
-![snake gif](https://github.com/Err0ric/Err0ric/blob/output/github-contribution-grid-snake-dark.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Err0ric/Err0ric/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Err0ric/Err0ric/output/github-contribution-grid-snake.svg">
+  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/Err0ric/Err0ric/output/github-contribution-grid-snake-dark.svg">
+</picture>
 
 ---
 
