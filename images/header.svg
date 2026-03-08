@@ -1,141 +1,233 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="160" viewBox="0 0 800 160">
+<svg width="900" height="280" viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#2e0057"/>
-      <stop offset="50%" stop-color="#4c1d95"/>
-      <stop offset="100%" stop-color="#1a0036"/>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0720;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#1a0a35;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#120830;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="dripGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7c3aed"/>
-      <stop offset="100%" stop-color="#5b21b6"/>
+    <linearGradient id="wave1Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1e0a40;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2a1060;stop-opacity:1" />
     </linearGradient>
+    <linearGradient id="wave2Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b1680;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4c1d96;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="wave3Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6d28d9;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+    <filter id="textGlow" x="-20%" y="-40%" width="140%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+    <pattern id="scanlines" x="0" y="0" width="2" height="4" patternUnits="userSpaceOnUse">
+      <rect width="2" height="1" fill="rgba(139,92,246,0.04)" />
+    </pattern>
   </defs>
 
+  <style>
+    /* Waves */
+    @keyframes wave1move {
+      0%   { d: path("M-100,0 L1000,0 L1000,55 Q850,85 700,60 Q550,35 400,70 Q250,100 100,65 Q0,45 -100,60 Z"); }
+      33%  { d: path("M-100,0 L1000,0 L1000,55 Q850,40 700,75 Q550,100 400,55 Q250,30 100,75 Q0,90 -100,55 Z"); }
+      66%  { d: path("M-100,0 L1000,0 L1000,55 Q850,70 700,45 Q550,20 400,60 Q250,88 100,50 Q0,35 -100,65 Z"); }
+      100% { d: path("M-100,0 L1000,0 L1000,55 Q850,85 700,60 Q550,35 400,70 Q250,100 100,65 Q0,45 -100,60 Z"); }
+    }
+    @keyframes wave2move {
+      0%   { d: path("M-100,0 L1000,0 L1000,45 Q850,75 700,48 Q550,22 400,58 Q250,85 100,52 Q0,35 -100,48 Z"); }
+      33%  { d: path("M-100,0 L1000,0 L1000,45 Q850,30 700,62 Q550,88 400,45 Q250,18 100,60 Q0,78 -100,42 Z"); }
+      66%  { d: path("M-100,0 L1000,0 L1000,45 Q850,60 700,35 Q550,12 400,50 Q250,75 100,38 Q0,22 -100,55 Z"); }
+      100% { d: path("M-100,0 L1000,0 L1000,45 Q850,75 700,48 Q550,22 400,58 Q250,85 100,52 Q0,35 -100,48 Z"); }
+    }
+    @keyframes wave3move {
+      0%   { d: path("M-100,0 L1000,0 L1000,35 Q850,62 700,38 Q550,14 400,45 Q250,72 100,40 Q0,25 -100,38 Z"); }
+      33%  { d: path("M-100,0 L1000,0 L1000,35 Q850,18 700,50 Q550,74 400,34 Q250,8  100,48 Q0,65 -100,30 Z"); }
+      66%  { d: path("M-100,0 L1000,0 L1000,35 Q850,50 700,25 Q550,2  400,40 Q250,65 100,28 Q0,12 -100,45 Z"); }
+      100% { d: path("M-100,0 L1000,0 L1000,35 Q850,62 700,38 Q550,14 400,45 Q250,72 100,40 Q0,25 -100,38 Z"); }
+    }
+
+    /* Binary: each char pulses between a clear visible opacity and fully transparent.
+       Three variants so not every char pulses identically. */
+    @keyframes binPulse {
+      0%   { opacity: 0; }
+      40%  { opacity: 0.55; }
+      60%  { opacity: 0.55; }
+      100% { opacity: 0; }
+    }
+    @keyframes binPulse2 {
+      0%   { opacity: 0; }
+      40%  { opacity: 0.40; }
+      60%  { opacity: 0.40; }
+      100% { opacity: 0; }
+    }
+    @keyframes binPulse3 {
+      0%   { opacity: 0; }
+      40%  { opacity: 0.65; }
+      60%  { opacity: 0.65; }
+      100% { opacity: 0; }
+    }
+
+    @keyframes cursorBlink  { 0%,49%{opacity:0.95} 50%,100%{opacity:0} }
+    @keyframes pulseDot     { 0%,100%{opacity:0.8} 50%{opacity:0.2} }
+    @keyframes subtitleFade { 0%,100%{opacity:0.85} 50%{opacity:0.55} }
+
+    .wave1 { animation: wave1move 7s   ease-in-out infinite; }
+    .wave2 { animation: wave2move 5.5s ease-in-out infinite; }
+    .wave3 { animation: wave3move 4.2s ease-in-out infinite; }
+
+    /* Each char gets its own duration + delay so they feel independent */
+    .b0  { animation: binPulse  3.1s ease-in-out infinite 0.0s; }
+    .b1  { animation: binPulse2 4.3s ease-in-out infinite 0.7s; }
+    .b2  { animation: binPulse  3.7s ease-in-out infinite 1.4s; }
+    .b3  { animation: binPulse3 2.9s ease-in-out infinite 2.1s; }
+    .b4  { animation: binPulse  4.8s ease-in-out infinite 0.3s; }
+    .b5  { animation: binPulse2 3.4s ease-in-out infinite 2.8s; }
+    .b6  { animation: binPulse  5.1s ease-in-out infinite 1.0s; }
+    .b7  { animation: binPulse3 3.8s ease-in-out infinite 1.7s; }
+    .b8  { animation: binPulse  4.2s ease-in-out infinite 2.4s; }
+    .b9  { animation: binPulse2 3.0s ease-in-out infinite 0.5s; }
+    .b10 { animation: binPulse  4.6s ease-in-out infinite 3.1s; }
+    .b11 { animation: binPulse3 3.3s ease-in-out infinite 1.2s; }
+    .b12 { animation: binPulse  5.5s ease-in-out infinite 1.9s; }
+    .b13 { animation: binPulse2 2.8s ease-in-out infinite 0.8s; }
+    .b14 { animation: binPulse  4.0s ease-in-out infinite 3.4s; }
+    .b15 { animation: binPulse3 3.6s ease-in-out infinite 1.5s; }
+    .b16 { animation: binPulse  4.4s ease-in-out infinite 0.2s; }
+    .b17 { animation: binPulse2 5.8s ease-in-out infinite 2.2s; }
+    .b18 { animation: binPulse  3.2s ease-in-out infinite 2.9s; }
+    .b19 { animation: binPulse3 4.7s ease-in-out infinite 0.6s; }
+    .b20 { animation: binPulse  3.9s ease-in-out infinite 2.5s; }
+    .b21 { animation: binPulse2 4.1s ease-in-out infinite 1.3s; }
+    .b22 { animation: binPulse  5.3s ease-in-out infinite 3.7s; }
+    .b23 { animation: binPulse3 3.5s ease-in-out infinite 1.0s; }
+    .b24 { animation: binPulse  4.9s ease-in-out infinite 0.4s; }
+    .b25 { animation: binPulse2 3.1s ease-in-out infinite 3.2s; }
+    .b26 { animation: binPulse3 4.5s ease-in-out infinite 1.8s; }
+    .b27 { animation: binPulse  2.7s ease-in-out infinite 2.6s; }
+    .b28 { animation: binPulse2 5.0s ease-in-out infinite 0.9s; }
+    .b29 { animation: binPulse3 3.3s ease-in-out infinite 3.9s; }
+
+    .cursor   { animation: cursorBlink  1.1s step-end   infinite; }
+    .dotpulse { animation: pulseDot     2s   ease-in-out infinite; }
+    .subtitle { animation: subtitleFade 4s   ease-in-out infinite; }
+  </style>
+
   <!-- Background -->
-  <rect width="800" height="110" fill="url(#bgGrad)"/>
+  <rect width="900" height="280" fill="url(#bgGrad)" />
+  <rect width="900" height="280" fill="url(#scanlines)" />
 
-  <!-- Subtle shimmer overlay that pulses -->
-  <rect width="800" height="110" fill="#a78bfa" opacity="0">
-    <animate attributeName="opacity"
-      values="0;0.08;0;0.05;0"
-      dur="4s" repeatCount="indefinite"/>
+  <!-- ── WAVES: flat at top, flow curves hang downward ── -->
+  <path class="wave1"
+    d="M-100,0 L1000,0 L1000,55 Q850,85 700,60 Q550,35 400,70 Q250,100 100,65 Q0,45 -100,60 Z"
+    fill="url(#wave1Grad)" />
+  <path class="wave2"
+    d="M-100,0 L1000,0 L1000,45 Q850,75 700,48 Q550,22 400,58 Q250,85 100,52 Q0,35 -100,48 Z"
+    fill="url(#wave2Grad)" />
+  <path class="wave3"
+    d="M-100,0 L1000,0 L1000,35 Q850,62 700,38 Q550,14 400,45 Q250,72 100,40 Q0,25 -100,38 Z"
+    fill="url(#wave3Grad)" />
+
+  <!-- ── BINARY SCATTER: all start at opacity 0, pulse up and back down ── -->
+  <g font-family="'Courier New', monospace" font-size="13" fill="#a78bfa">
+    <!-- Left edge cluster -->
+    <text class="b0"  x="18"  y="125">1</text>
+    <text class="b1"  x="35"  y="148">0</text>
+    <text class="b2"  x="52"  y="128">1</text>
+    <text class="b3"  x="22"  y="165">0</text>
+    <text class="b4"  x="68"  y="155">1</text>
+    <text class="b5"  x="42"  y="182">0</text>
+    <text class="b6"  x="80"  y="138">1</text>
+    <text class="b7"  x="15"  y="198">0</text>
+    <text class="b8"  x="58"  y="205">1</text>
+
+    <!-- Left-center cluster -->
+    <text class="b9"  x="142" y="115">0</text>
+    <text class="b10" x="162" y="138">1</text>
+    <text class="b11" x="128" y="162">0</text>
+    <text class="b12" x="175" y="178">1</text>
+    <text class="b13" x="115" y="195">0</text>
+    <text class="b14" x="155" y="210">1</text>
+
+    <!-- Center-left sparse -->
+    <text class="b15" x="250" y="125">1</text>
+    <text class="b16" x="268" y="152">0</text>
+    <text class="b17" x="238" y="178">1</text>
+
+    <!-- Center-right sparse -->
+    <text class="b18" x="625" y="128">0</text>
+    <text class="b19" x="642" y="155">1</text>
+    <text class="b20" x="610" y="182">0</text>
+
+    <!-- Right-center cluster -->
+    <text class="b21" x="718" y="118">1</text>
+    <text class="b22" x="735" y="142">0</text>
+    <text class="b23" x="705" y="168">1</text>
+    <text class="b24" x="748" y="188">0</text>
+    <text class="b25" x="722" y="208">1</text>
+
+    <!-- Right edge cluster -->
+    <text class="b26" x="822" y="122">1</text>
+    <text class="b27" x="840" y="148">0</text>
+    <text class="b28" x="808" y="172">1</text>
+    <text class="b29" x="858" y="162">0</text>
+    <text class="b0"  x="875" y="138">1</text>
+    <text class="b1"  x="885" y="185">0</text>
+  </g>
+
+  <!-- ── CORNER BRACKETS ── -->
+  <path d="M20,265 L20,245 L40,245"    stroke="#8b5cf6" stroke-width="2"   fill="none" opacity="0.55" />
+  <path d="M880,265 L880,245 L860,245" stroke="#8b5cf6" stroke-width="2"   fill="none" opacity="0.55" />
+  <path d="M20,108 L20,125 L40,125"    stroke="#8b5cf6" stroke-width="1.5" fill="none" opacity="0.35" />
+  <path d="M880,108 L880,125 L860,125" stroke="#8b5cf6" stroke-width="1.5" fill="none" opacity="0.35" />
+
+  <!-- ── LABELS ── -->
+  <text x="30" y="140"
+    font-family="'Courier New', 'Lucida Console', monospace"
+    font-size="10" fill="#a78bfa" opacity="0.5">~/github/Err0ric</text>
+
+  <circle class="dotpulse" cx="864" cy="136" r="4" fill="#8b5cf6" />
+  <text x="853" y="140"
+    font-family="'Courier New', monospace"
+    font-size="9" fill="#a78bfa" text-anchor="end" opacity="0.5">ONLINE</text>
+
+  <!-- Divider -->
+  <line x1="20" y1="150" x2="880" y2="150" stroke="#3b1680" stroke-width="0.8" opacity="0.7" />
+
+  <!-- ── MAIN TITLE ── -->
+  <text x="450" y="206"
+    font-family="'Courier New', 'Lucida Console', monospace"
+    font-size="48" font-weight="700" letter-spacing="14"
+    text-anchor="middle"
+    fill="#8b5cf6" opacity="0.3"
+    filter="url(#textGlow)">ERR0RIC_</text>
+  <text x="450" y="204"
+    font-family="'Courier New', 'Lucida Console', monospace"
+    font-size="48" font-weight="700" letter-spacing="14"
+    text-anchor="middle"
+    fill="#ffffff"
+    filter="url(#textGlow)">ERR0RIC_</text>
+
+  <!-- Blinking cursor -->
+  <rect class="cursor" x="720" y="170" width="13" height="38" fill="#8b5cf6" rx="1" />
+
+  <!-- Accent line under title -->
+  <line x1="180" y1="222" x2="720" y2="222" stroke="#7c3aed" stroke-width="1" opacity="0.6" />
+
+  <!-- ── SUBTITLE ── -->
+  <text class="subtitle" x="450" y="250"
+    font-family="'Courier New', 'Lucida Console', monospace"
+    font-size="15" letter-spacing="4"
+    text-anchor="middle"
+    fill="#c4b5fd">InfoSec  ·  OSINT  ·  Always Building</text>
+
+  <!-- ── BOTTOM ACCENT BAR ── -->
+  <rect x="0" y="267" width="900" height="13" fill="#7c3aed" opacity="0.95" />
+  <rect x="0" y="267" width="900" height="13" opacity="0.5">
+    <animate attributeName="fill"
+      values="#8b5cf6;#a78bfa;#c4b5fd;#a78bfa;#8b5cf6"
+      dur="3s" repeatCount="indefinite" />
   </rect>
 
-  <!-- Title text — fades and rises in -->
-  <text x="400" y="54" text-anchor="middle"
-    font-family="Segoe UI, Arial, sans-serif"
-    font-size="34" font-weight="700" letter-spacing="8"
-    fill="#ffffff" opacity="0">
-    Err0ric
-    <animate attributeName="opacity" values="0;1" dur="1.2s" fill="freeze"/>
-    <animateTransform attributeName="transform" type="translate"
-      values="0 8;0 0" dur="1.2s" fill="freeze"/>
-  </text>
-
-  <!-- Subtitle — fades in after title -->
-  <text x="400" y="82" text-anchor="middle"
-    font-family="Segoe UI, Arial, sans-serif"
-    font-size="12" letter-spacing="2.5"
-    fill="#c4b5fd" opacity="0">
-    Information Security  ·  OSINT  ·  Always Building
-    <animate attributeName="opacity" values="0;0;1" dur="2s" fill="freeze"/>
-  </text>
-
-  <!-- Drip base bar -->
-  <rect x="0" y="95" width="800" height="16" fill="url(#dripGrad)"/>
-
-  <!-- Drip 1 -->
-  <ellipse cx="60" cy="128" rx="14" ry="0" fill="#7c3aed">
-    <animate attributeName="ry" values="0;20" dur="0.6s" begin="0.3s" fill="freeze"/>
-  </ellipse>
-  <rect x="46" y="100" width="28" height="0" fill="#7c3aed">
-    <animate attributeName="height" values="0;28" dur="0.6s" begin="0.3s" fill="freeze"/>
-  </rect>
-
-  <!-- Drip 2 -->
-  <ellipse cx="140" cy="140" rx="9" ry="0" fill="#6d28d9">
-    <animate attributeName="ry" values="0;16" dur="0.5s" begin="0.5s" fill="freeze"/>
-  </ellipse>
-  <rect x="131" y="100" width="18" height="0" fill="#6d28d9">
-    <animate attributeName="height" values="0;40" dur="0.5s" begin="0.5s" fill="freeze"/>
-  </rect>
-
-  <!-- Drip 3 -->
-  <ellipse cx="220" cy="120" rx="18" ry="0" fill="#7c3aed">
-    <animate attributeName="ry" values="0;12" dur="0.4s" begin="0.2s" fill="freeze"/>
-  </ellipse>
-  <rect x="202" y="100" width="36" height="0" fill="#7c3aed">
-    <animate attributeName="height" values="0;20" dur="0.4s" begin="0.2s" fill="freeze"/>
-  </rect>
-
-  <!-- Drip 4 -->
-  <ellipse cx="310" cy="134" rx="11" ry="0" fill="#5b21b6">
-    <animate attributeName="ry" values="0;18" dur="0.7s" begin="0.4s" fill="freeze"/>
-  </ellipse>
-  <rect x="299" y="100" width="22" height="0" fill="#5b21b6">
-    <animate attributeName="height" values="0;34" dur="0.7s" begin="0.4s" fill="freeze"/>
-  </rect>
-
-  <!-- Drip 5 small -->
-  <ellipse cx="375" cy="116" rx="7" ry="0" fill="#7c3aed">
-    <animate attributeName="ry" values="0;10" dur="0.35s" begin="0.6s" fill="freeze"/>
-  </ellipse>
-  <rect x="368" y="100" width="14" height="0" fill="#7c3aed">
-    <animate attributeName="height" values="0;16" dur="0.35s" begin="0.6s" fill="freeze"/>
-  </rect>
-
-  <!-- Drip 6 large -->
-  <ellipse cx="450" cy="144" rx="16" ry="0" fill="#6d28d9">
-    <animate attributeName="ry" values="0;22" dur="0.8s" begin="0.15s" fill="freeze"/>
-  </ellipse>
-  <rect x="434" y="100" width="32" height="0" fill="#6d28d9">
-    <animate attributeName="height" values="0;44" dur="0.8s" begin="0.15s" fill="freeze"/>
-  </rect>
-
-  <!-- Drip 7 -->
-  <ellipse cx="530" cy="128" rx="12" ry="0" fill="#7c3aed">
-    <animate attributeName="ry" values="0;16" dur="0.55s" begin="0.35s" fill="freeze"/>
-  </ellipse>
-  <rect x="518" y="100" width="24" height="0" fill="#7c3aed">
-    <animate attributeName="height" values="0;28" dur="0.55s" begin="0.35s" fill="freeze"/>
-  </rect>
-
-  <!-- Drip 8 thin tall -->
-  <ellipse cx="600" cy="140" rx="8" ry="0" fill="#5b21b6">
-    <animate attributeName="ry" values="0;14" dur="0.65s" begin="0.5s" fill="freeze"/>
-  </ellipse>
-  <rect x="592" y="100" width="16" height="0" fill="#5b21b6">
-    <animate attributeName="height" values="0;40" dur="0.65s" begin="0.5s" fill="freeze"/>
-  </rect>
-
-  <!-- Drip 9 -->
-  <ellipse cx="665" cy="122" rx="13" ry="0" fill="#7c3aed">
-    <animate attributeName="ry" values="0;15" dur="0.45s" begin="0.25s" fill="freeze"/>
-  </ellipse>
-  <rect x="652" y="100" width="26" height="0" fill="#7c3aed">
-    <animate attributeName="height" values="0;22" dur="0.45s" begin="0.25s" fill="freeze"/>
-  </rect>
-
-  <!-- Drip 10 small -->
-  <ellipse cx="722" cy="114" rx="6" ry="0" fill="#6d28d9">
-    <animate attributeName="ry" values="0;9" dur="0.3s" begin="0.55s" fill="freeze"/>
-  </ellipse>
-  <rect x="716" y="100" width="12" height="0" fill="#6d28d9">
-    <animate attributeName="height" values="0;14" dur="0.3s" begin="0.55s" fill="freeze"/>
-  </rect>
-
-  <!-- Drip 11 -->
-  <ellipse cx="768" cy="132" rx="10" ry="0" fill="#7c3aed">
-    <animate attributeName="ry" values="0;17" dur="0.6s" begin="0.45s" fill="freeze"/>
-  </ellipse>
-  <rect x="758" y="100" width="20" height="0" fill="#7c3aed">
-    <animate attributeName="height" values="0;32" dur="0.6s" begin="0.45s" fill="freeze"/>
-  </rect>
-
-  <!-- Detached falling dots -->
-  <circle cx="108" cy="152" r="4" fill="#7c3aed" opacity="0.7"/>
-  <circle cx="340" cy="149" r="3" fill="#a78bfa" opacity="0.6"/>
-  <circle cx="480" cy="156" r="5" fill="#6d28d9" opacity="0.7"/>
-  <circle cx="618" cy="150" r="3" fill="#a78bfa" opacity="0.5"/>
-  <circle cx="742" cy="146" r="4" fill="#7c3aed" opacity="0.6"/>
 </svg>
