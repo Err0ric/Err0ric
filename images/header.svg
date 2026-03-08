@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d0d"/>
+      <stop offset="50%" style="stop-color:#1a0a2e"/>
+      <stop offset="100%" style="stop-color:#0d0d0d"/>
+    </linearGradient>
+    <linearGradient id="wave1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.8"/>
+      <stop offset="50%" style="stop-color:#a78bfa;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.8"/>
+    </linearGradient>
+    <linearGradient id="wave2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4c1d95;stop-opacity:0.5"/>
+      <stop offset="50%" style="stop-color:#6d28d9;stop-opacity:0.7"/>
+      <stop offset="100%" style="stop-color:#4c1d95;stop-opacity:0.5"/>
+    </linearGradient>
+    <style>
+      .wave1 { animation: drift1 6s ease-in-out infinite; }
+      .wave2 { animation: drift2 8s ease-in-out infinite; }
+      .wave3 { animation: drift3 5s ease-in-out infinite; }
+      .title { animation: fadeSlideIn 1.2s ease-out forwards; opacity: 0; }
+      .subtitle { animation: fadeSlideIn 1.2s ease-out 0.6s forwards; opacity: 0; }
+      .glow { animation: pulse 3s ease-in-out infinite; }
+      @keyframes drift1 {
+        0%, 100% { d: path("M0,60 C200,30 400,90 600,50 C700,30 750,60 800,45 L800,120 L0,120 Z"); }
+        50% { d: path("M0,50 C150,80 350,20 550,65 C680,90 750,40 800,55 L800,120 L0,120 Z"); }
+      }
+      @keyframes drift2 {
+        0%, 100% { d: path("M0,75 C250,45 450,95 650,60 C720,45 770,70 800,60 L800,120 L0,120 Z"); }
+        50% { d: path("M0,65 C180,95 380,35 580,75 C700,95 760,50 800,70 L800,120 L0,120 Z"); }
+      }
+      @keyframes drift3 {
+        0%, 100% { d: path("M0,85 C300,65 500,105 700,75 C740,65 775,80 800,72 L800,120 L0,120 Z"); }
+        50% { d: path("M0,78 C220,105 420,55 620,85 C720,105 770,65 800,82 L800,120 L0,120 Z"); }
+      }
+      @keyframes fadeSlideIn {
+        0% { opacity: 0; transform: translateY(10px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.15; }
+        50% { opacity: 0.35; }
+      }
+    </style>
+  </defs>
+  <rect width="800" height="120" fill="url(#bg)" rx="0"/>
+  <ellipse class="glow" cx="400" cy="60" rx="300" ry="50" fill="#7c3aed"/>
+  <path class="wave1" fill="url(#wave1)" d="M0,60 C200,30 400,90 600,50 C700,30 750,60 800,45 L800,120 L0,120 Z"/>
+  <path class="wave2" fill="url(#wave2)" d="M0,75 C250,45 450,95 650,60 C720,45 770,70 800,60 L800,120 L0,120 Z"/>
+  <path class="wave3" fill="#4c1d95" opacity="0.4" d="M0,85 C300,65 500,105 700,75 C740,65 775,80 800,72 L800,120 L0,120 Z"/>
+  <text class="title" x="400" y="58" text-anchor="middle"
+    font-family="'Segoe UI', Arial, sans-serif"
+    font-size="38" font-weight="700" letter-spacing="6" fill="#ffffff">
+    Err0ric
+  </text>
+  <text class="subtitle" x="400" y="88" text-anchor="middle"
+    font-family="'Segoe UI', Arial, sans-serif"
+    font-size="13" letter-spacing="3" fill="#a78bfa">
+    Information Security  ·  OSINT  ·  Always Building
+  </text>
+</svg>
