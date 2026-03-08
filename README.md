@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="images/header.svg" alt="Err0ric" width="800"/>
-</p>
+<img src="images/header.svg" width="100%" alt="Err0ric" />
 
 <br/>
 
