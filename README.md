@@ -1,68 +1,78 @@
-<img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=Err0ric.Err0ric" />
-<h1 align="center">
-    <img src="https://readme-typing-svg.herokuapp.com/?font=Orbitron&size=40&center=true&vCenter=true&width=500&height=70&duration=4500&color=BF40FF&lines=Err0ric" />
-</h1>
-<h3 align="center">Cybersecurity Professional | Telecom Security</h3>
+![header](https://capsule-render.vercel.app/api?type=waving&color=6d28d9&height=100&section=header&text=Err0ric&fontColor=ffffff&fontSize=40&fontAlignY=70)
+
+<h3 align="center">Security Lead · OSINT Developer · Perpetual Tinkerer</h3>
+
 <br/>
-<div align="center">
-Cybersecurity Lead | B.S. Cybersecurity (WGU) | OSINT | Endpoint Security | Threat Hunting | Incident Response | Cloud Security | DC253 | #Wardriving
-</div>
-<div align="center"> 
-  <a href="mailto:Err0ric@proton.me">
-    <img src="https://img.shields.io/badge/email-333333?style=for-the-badge&logo=gmail&logoColor=red" />
-  </a>
-  <a href="https://www.linkedin.com/in/eric-henderson-/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-  <a href="https://Err0ric.github.io" target="_blank">
-     <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white" />
-  </a>
-  <a href="https://infosec.exchange/@Err0ric" target="_blank">
-     <img src="https://img.shields.io/badge/Mastodon-6364FF?style=for-the-badge&logo=mastodon&logoColor=white" />
-  </a>
-</div>
-<div align="center">
-  <br/>
-  <img src="https://tryhackme-badges.s3.amazonaws.com/Err0ric.png" alt="TryHackMe">
-</div>
-<hr/>
-<h2 align="center">🛠️ Skills & Tools</h2>
-<br/>
-<div align="center">
-    <img src="https://skillicons.dev/icons?i=linux,arch,debian,kali,windows,apple&theme=dark" />
-    <br/>
-    <img src="https://skillicons.dev/icons?i=python,docker,elasticsearch,grafana,github,gitlab&theme=dark" />
-    <br/>
-    <img src="https://skillicons.dev/icons?i=vscode,raspberrypi,discord,obsidian&theme=dark" />
-</div>
-<br/>
-<hr/>
-<div align="center">
-  <h2>🐍 My Contributions</h2>
-  <br>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Err0ric/Err0ric/output/github-contribution-grid-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Err0ric/Err0ric/output/github-contribution-grid-snake.svg" />
-    <img alt="github-contribution-grid-snake" src="https://raw.githubusercontent.com/Err0ric/Err0ric/output/github-contribution-grid-snake.svg" />
-  </picture>
-  <br/><br/><br/>
-</div>
-<hr/>
-<h2 align="center">⚡ Stats</h2>
-<br>
-<div align="center">
-  <img width=390 src="https://github-readme-stats.vercel.app/api?username=Err0ric&count_private=true&show_icons=true&theme=midnight-purple&rank_icon=github&border_radius=10&cache_seconds=1800" alt="readme stats" />
-  <br/>
-  <img width=325 align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Err0ric&hide=HTML&langs_count=8&layout=compact&theme=midnight-purple&border_radius=10&size_weight=0.5&count_weight=0.5&exclude_repo=github-readme-stats&cache_seconds=1800" alt="top langs" />
-</div>
-<br/>
-<div align="center">
-  <img src="https://streak-stats.demolab.com/?user=Err0ric&theme=midnight-purple&border_radius=10" alt="streak stats"/>
-</div>
-<br/><br/>
-<hr/>
-<br/>
-<div align="center">
-  <a href='https://ko-fi.com/Err0ric' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi5.png?v=3' border='0' alt='Buy Me a Coffee' /></a>
-</div>
-<br/>
+
+## 👾 About Me
+```python
+profile = {
+    "name":       "Eric Henderson",
+    "handle":     "Err0ric",
+    "location":   "Pacific Northwest, USA",
+    "role":       "Cybersecurity Lead",
+    "education":  ["B.S. Cybersecurity (in progress)"],
+    "building":   "CrawlR — browser-based OSINT platform @ crawlr.lol",
+    "focus": [
+        "OSINT & digital forensics",
+        "Network security & infrastructure hardening",
+        "Security policy & compliance frameworks",
+        "Tool development with Python & FastAPI",
+    ],
+    "currently_learning": ["Claude API", "D3.js", "advanced OSINT tradecraft"],
+    "hobbies": ["building tools nobody asked for", "CTF", "tinkering"],
+}
+```
+
+---
+
+## 🔧 Tools & Stack
+
+<p align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="40" height="40"/>
+</p>
+
+---
+
+## 🚀 Featured Project
+
+### [CrawlR — OSINT Investigation Platform](https://github.com/Err0ric/crawlr)
+> Browser-based OSINT platform. No install. No setup. One Claude API key unlocks everything.
+
+- Username enumeration across 3,000+ platforms via Sherlock + Maigret
+- Email breach detection, DNS/WHOIS/SSL recon, port scanning
+- Email header analysis with spoofing and phishing detection
+- AI-powered Deep Dive intelligence dossier via Claude API
+- Live at **[crawlr.lol](https://crawlr.lol)**
+
+---
+
+## 📊 GitHub Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Err0ric&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d0d0d&title_color=7c3aed&icon_color=7c3aed&text_color=ffffff" width="48%"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Err0ric&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d0d0d&title_color=7c3aed&text_color=ffffff" width="40%"/>
+</p>
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Err0ric&theme=tokyonight&hide_border=true&background=0d0d0d&ring=7c3aed&fire=7c3aed&currStreakLabel=7c3aed"/>
+</p>
+
+---
+
+## 🐍 Contribution Snake
+
+![snake gif](https://github.com/Err0ric/Err0ric/blob/output/github-contribution-grid-snake-dark.svg)
+
+---
+
+![footer](https://capsule-render.vercel.app/api?type=waving&color=6d28d9&height=80&section=footer)
