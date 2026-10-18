@@ -23,7 +23,6 @@ TODAY = date.today().isoformat()
 LINES = [
     [("err0ric", "user"), ("@", "sym"), ("kali", "host"), (":", "sym"), ("~", "path"), ("$ ", "sym"), ("cat about.txt", "cmd")],
     [],
-    [("name:      ", "key"), ("Eric Henderson", "value")],
     [("handle:    ", "key"), ("Err0ric", "value")],
     [("location:  ", "key"), ("Pacific Northwest, USA", "value")],
     [("role:      ", "key"), ("Cybersecurity Lead", "value")],
