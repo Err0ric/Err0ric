@@ -23,31 +23,27 @@ TODAY = date.today().isoformat()
 LINES = [
     ("err0ric@kali:~$ cat about.txt", "prompt"),
     ("", "blank"),
-    ("name:       Eric Henderson", "value"),
-    ("handle:     Err0ric", "value"),
-    ("location:   Pacific Northwest, USA", "value"),
-    ("role:       Cybersecurity Lead  |  solo security program", "value"),
-    ("education:  B.S. Cybersecurity, WGU (finishing 2026)", "value"),
-    (f"updated:    {TODAY}", "muted"),
+    ("name:      Eric Henderson", "value"),
+    ("handle:    Err0ric", "value"),
+    ("location:  Pacific Northwest, USA", "value"),
+    ("role:      Cybersecurity Lead", "value"),
+    ("education: B.S. Cybersecurity (in progress)", "value"),
     ("", "blank"),
     ("building:", "header"),
-    ("  - darkwire.tech   live cybersecurity news + CVE feed", "item"),
-    ("  - crawlr.lol      OSINT investigation platform", "item"),
-    ("  - Remnant         open-source LLM-powered SIEM front end (WIP)", "item"),
-    ("  - home AI SOC     multi-agent security team on a Proxmox homelab", "item"),
+    ("  - darkwire.tech   cybersecurity news + CVE feed", "item"),
+    ("  - crawlr.lol      OSINT platform", "item"),
+    ("  - Remnant         open-source LLM SIEM front end (WIP)", "item"),
     ("", "blank"),
     ("focus:", "header"),
-    ("  - AI security & governance (MITRE ATLAS + ATT&CK)", "item"),
-    ("  - vulnerability, patch & risk management", "item"),
-    ("  - compliance: NIST CSF / SP 800-171, CISA CPGs", "item"),
-    ("  - OSINT & log forensics (Sigma, Hayabusa, Chainsaw)", "item"),
-    ("", "blank"),
-    ("community:  DC253 | DC206 | BSides Seattle | InfraGard | Trace Labs", "value"),
+    ("  - OSINT & digital forensics", "item"),
+    ("  - AI security (MITRE ATLAS + ATT&CK)", "item"),
+    ("  - Network security & infrastructure hardening", "item"),
+    ("  - Security policy & compliance frameworks", "item"),
     ("", "blank"),
     ("hobbies:", "header"),
-    ("  - homelab tinkering (3-node Proxmox + RTX 3080 LLM box)", "item"),
     ("  - building tools nobody asked for", "item"),
-    ("  - CTFs, MTG, comics, 3D printing", "item"),
+    ("  - CTF", "item"),
+    ("  - tinkering", "item"),
     ("", "blank"),
     ("err0ric@kali:~$ ", "prompt_end"),
 ]
@@ -68,7 +64,7 @@ LINE_H = 21
 PAD_X = 18
 TITLE_H = 34
 FIRST_BASELINE = 63
-WIDTH = 760
+WIDTH = 680
 
 # timing (seconds)
 START_DELAY = 0.6
