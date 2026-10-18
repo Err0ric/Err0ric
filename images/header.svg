@@ -185,8 +185,9 @@
   <!-- ── LABELS ── -->
   <text x="30" y="140"
     font-family="'Courier New', 'Lucida Console', monospace"
-    font-size="10" fill="#a78bfa" opacity="0.5">~/github/Err0ric</text>
+    font-size="10" fill="#a78bfa" opacity="0.5">~/github/Err0ric  ·  last sync 2026-10-17</text>
 
+  <text x="800" y="140" font-family="'Courier New', monospace" font-size="9" fill="#a78bfa" text-anchor="end" opacity="0.4">v2026.10</text>
   <circle class="dotpulse" cx="864" cy="136" r="4" fill="#8b5cf6" />
   <text x="853" y="140"
     font-family="'Courier New', monospace"
@@ -220,7 +221,7 @@
     font-family="'Courier New', 'Lucida Console', monospace"
     font-size="15" letter-spacing="4"
     text-anchor="middle"
-    fill="#c4b5fd">InfoSec  ·  OSINT  ·  Always Building</text>
+    fill="#c4b5fd">InfoSec  ·  OSINT  ·  AI Security  ·  Always Building</text>
 
   <!-- ── BOTTOM ACCENT BAR ── -->
   <rect x="0" y="267" width="900" height="13" fill="#7c3aed" opacity="0.95" />
