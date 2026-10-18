@@ -1,4 +1,4 @@
-<img src="images/header.svg" width="100%" alt="Err0ric" />
+<img src="images/banner.svg" width="100%" alt="Err0ric" />
 
 <img src="images/about.svg" width="100%" alt="About Me"/>
 
