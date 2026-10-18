@@ -109,6 +109,23 @@
     .b28 { animation: binPulse2 5.0s ease-in-out infinite 0.9s; }
     .b29 { animation: binPulse3 3.3s ease-in-out infinite 3.9s; }
 
+    /* Glitch: two colour-split copies of the title flash for a few frames every ~7s */
+    @keyframes glitchA {
+      0%, 91.0%, 93.6%, 100% { opacity: 0; }
+      91.5% { opacity: 0.75; } 92.3% { opacity: 0; } 92.8% { opacity: 0.6; } 93.3% { opacity: 0; }
+    }
+    @keyframes glitchB {
+      0%, 91.2%, 93.8%, 100% { opacity: 0; }
+      91.7% { opacity: 0.7; } 92.1% { opacity: 0; } 92.9% { opacity: 0.55; } 93.4% { opacity: 0; }
+    }
+    @keyframes glitchMain {
+      0%, 91.4%, 93.5%, 100% { opacity: 1; }
+      91.9% { opacity: 0.85; } 92.6% { opacity: 1; } 93.0% { opacity: 0.9; }
+    }
+    .glitchA { animation: glitchA 7s linear infinite; }
+    .glitchB { animation: glitchB 7s linear infinite; }
+    .title   { animation: glitchMain 7s linear infinite; }
+
     .cursor   { animation: cursorBlink  1.1s step-end   infinite; }
     .dotpulse { animation: pulseDot     2s   ease-in-out infinite; }
     .subtitle { animation: subtitleFade 4s   ease-in-out infinite; }
@@ -203,7 +220,16 @@
     text-anchor="middle"
     fill="#8b5cf6" opacity="0.3"
     filter="url(#textGlow)">ERR0RIC_</text>
-  <text x="450" y="204"
+  <!-- Glitch layers (hidden except for brief flashes) -->
+  <text class="glitchA" x="446" y="203"
+    font-family="'Courier New', 'Lucida Console', monospace"
+    font-size="48" font-weight="700" letter-spacing="14"
+    text-anchor="middle" fill="#22d3ee" opacity="0">ERR0RIC_</text>
+  <text class="glitchB" x="454" y="205"
+    font-family="'Courier New', 'Lucida Console', monospace"
+    font-size="48" font-weight="700" letter-spacing="14"
+    text-anchor="middle" fill="#e879f9" opacity="0">ERR0RIC_</text>
+  <text class="title" x="450" y="204"
     font-family="'Courier New', 'Lucida Console', monospace"
     font-size="48" font-weight="700" letter-spacing="14"
     text-anchor="middle"

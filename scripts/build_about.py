@@ -17,46 +17,54 @@ from pathlib import Path
 from xml.sax.saxutils import escape
 
 # ---------------------------------------------------------------- content --
-# (text, style)  styles: prompt | key | value | header | item | muted | blank
+# each line is a list of (text, style) segments; an empty list is a blank line
 TODAY = date.today().isoformat()
 
 LINES = [
-    ("err0ric@kali:~$ cat about.txt", "prompt"),
-    ("", "blank"),
-    ("name:      Eric Henderson", "value"),
-    ("handle:    Err0ric", "value"),
-    ("location:  Pacific Northwest, USA", "value"),
-    ("role:      Cybersecurity Lead", "value"),
-    ("education: B.S. Cybersecurity (in progress)", "value"),
-    ("", "blank"),
-    ("building:", "header"),
-    ("  - darkwire.tech   cybersecurity news + CVE feed", "item"),
-    ("  - crawlr.lol      OSINT platform", "item"),
-    ("  - Remnant         open-source LLM SIEM front end (WIP)", "item"),
-    ("", "blank"),
-    ("focus:", "header"),
-    ("  - OSINT & digital forensics", "item"),
-    ("  - AI security (MITRE ATLAS + ATT&CK)", "item"),
-    ("  - Network security & infrastructure hardening", "item"),
-    ("  - Security policy & compliance frameworks", "item"),
-    ("", "blank"),
-    ("hobbies:", "header"),
-    ("  - building tools nobody asked for", "item"),
-    ("  - CTF", "item"),
-    ("  - tinkering", "item"),
-    ("", "blank"),
-    ("err0ric@kali:~$ ", "prompt_end"),
+    [("err0ric", "user"), ("@", "sym"), ("kali", "host"), (":", "sym"), ("~", "path"), ("$ ", "sym"), ("cat about.txt", "cmd")],
+    [],
+    [("name:      ", "key"), ("Eric Henderson", "value")],
+    [("handle:    ", "key"), ("Err0ric", "value")],
+    [("location:  ", "key"), ("Pacific Northwest, USA", "value")],
+    [("role:      ", "key"), ("Cybersecurity Lead", "value")],
+    [("education: ", "key"), ("B.S. Cybersecurity (in progress)", "value")],
+    [],
+    [("building:", "header")],
+    [("  - ", "dash"), ("darkwire.tech", "url"), ("   cybersecurity news + CVE feed", "item")],
+    [("  - ", "dash"), ("crawlr.lol", "url"), ("      OSINT platform", "item")],
+    [("  - ", "dash"), ("Remnant", "name"), ("         open-source LLM SIEM front end ", "item"), ("(WIP)", "wip")],
+    [],
+    [("focus:", "header")],
+    [("  - ", "dash"), ("OSINT & digital forensics", "item")],
+    [("  - ", "dash"), ("AI security (MITRE ATLAS + ATT&CK)", "item")],
+    [("  - ", "dash"), ("Network security & infrastructure hardening", "item")],
+    [("  - ", "dash"), ("Security policy & compliance frameworks", "item")],
+    [],
+    [("hobbies:", "header")],
+    [("  - ", "dash"), ("building tools nobody asked for", "item")],
+    [("  - ", "dash"), ("CTF", "item")],
+    [("  - ", "dash"), ("tinkering", "item")],
+    [],
+    [("err0ric", "user"), ("@", "sym"), ("kali", "host"), (":", "sym"), ("~", "path"), ("$ ", "sym")],
 ]
 
 # ---------------------------------------------------------------- styling --
 COLORS = {
-    "prompt": "#c4b5fd",
-    "prompt_end": "#8b5cf6",
-    "value": "#e2d9f3",
-    "header": "#a78bfa",
-    "item": "#c4b5fd",
-    "muted": "#7c6aa8",
+    "user":   "#34d399",   # green user
+    "host":   "#34d399",
+    "sym":    "#e2d9f3",
+    "path":   "#60a5fa",   # blue path
+    "cmd":    "#ffffff",
+    "key":    "#a78bfa",   # purple keys
+    "value":  "#f1ecfa",   # near-white values
+    "header": "#8b5cf6",
+    "dash":   "#5b4a8a",
+    "item":   "#d8cdf0",
+    "url":    "#c4b5fd",
+    "name":   "#c4b5fd",
+    "wip":    "#fbbf24",   # amber
 }
+UNDERLINE = {"url"}
 FONT = "'Courier New','Lucida Console',monospace"
 FONT_SIZE = 13
 CHAR_W = 7.8          # advance width of Courier New at 13px
@@ -82,19 +90,22 @@ def build(static: bool = False) -> str:
     t = START_DELAY
     chars = []  # (x, y, char, color, appear_time)
     cursor_keys = []  # (time, x, y)
-    for i, (text, style) in enumerate(LINES):
+    for i, segs in enumerate(LINES):
         y = FIRST_BASELINE + i * LINE_H
         cursor_keys.append((t, PAD_X, y - 10))
-        if style == "blank":
+        if not segs:
             t += BLANK_PAUSE
             continue
-        color = COLORS[style]
-        for j, ch in enumerate(text):
-            x = PAD_X + j * CHAR_W
-            if ch != " ":
-                chars.append((x, y, ch, color, t))
-            t += CHAR_T
-            cursor_keys.append((t, x + CHAR_W, y - 10))
+        col = 0
+        for text, style in segs:
+            color = COLORS[style]
+            for ch in text:
+                x = PAD_X + col * CHAR_W
+                if ch != " ":
+                    chars.append((x, y, ch, color, t, style in UNDERLINE))
+                t += CHAR_T
+                col += 1
+                cursor_keys.append((t, x + CHAR_W, y - 10))
         t += LINE_PAUSE
     total = t + END_HOLD
     dur = round(total, 3)
@@ -137,7 +148,7 @@ def build(static: bool = False) -> str:
     )
 
     # 2) characters
-    for x, y, ch, color, at in chars:
+    for x, y, ch, color, at, ul in chars:
         if static:
             anim = ""
             op = "1"
@@ -152,7 +163,7 @@ def build(static: bool = False) -> str:
             op = "0"
         out.append(
             f'<text x="{x:.1f}" y="{y}" font-family="{FONT}" font-size="{FONT_SIZE}" '
-            f'fill="{color}" opacity="{op}">{escape(ch)}{anim}</text>'
+            f'fill="{color}" opacity="{op}"{" text-decoration=\"underline\"" if ul else ""}>{escape(ch)}{anim}</text>'
         )
 
     # 3) cursor
