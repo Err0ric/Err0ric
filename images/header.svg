@@ -1,4 +1,4 @@
-<svg width="900" height="280" viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg">
+<svg width="900" height="170" viewBox="0 0 900 170" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#0d0720;stop-opacity:1" />
@@ -109,31 +109,14 @@
     .b28 { animation: binPulse2 5.0s ease-in-out infinite 0.9s; }
     .b29 { animation: binPulse3 3.3s ease-in-out infinite 3.9s; }
 
-    /* Glitch: two colour-split copies of the title flash for a few frames every ~7s */
-    @keyframes glitchA {
-      0%, 91.0%, 93.6%, 100% { opacity: 0; }
-      91.5% { opacity: 0.75; } 92.3% { opacity: 0; } 92.8% { opacity: 0.6; } 93.3% { opacity: 0; }
-    }
-    @keyframes glitchB {
-      0%, 91.2%, 93.8%, 100% { opacity: 0; }
-      91.7% { opacity: 0.7; } 92.1% { opacity: 0; } 92.9% { opacity: 0.55; } 93.4% { opacity: 0; }
-    }
-    @keyframes glitchMain {
-      0%, 91.4%, 93.5%, 100% { opacity: 1; }
-      91.9% { opacity: 0.85; } 92.6% { opacity: 1; } 93.0% { opacity: 0.9; }
-    }
-    .glitchA { animation: glitchA 7s linear infinite; }
-    .glitchB { animation: glitchB 7s linear infinite; }
-    .title   { animation: glitchMain 7s linear infinite; }
-
     .cursor   { animation: cursorBlink  1.1s step-end   infinite; }
     .dotpulse { animation: pulseDot     2s   ease-in-out infinite; }
     .subtitle { animation: subtitleFade 4s   ease-in-out infinite; }
   </style>
 
   <!-- Background -->
-  <rect width="900" height="280" fill="url(#bgGrad)" />
-  <rect width="900" height="280" fill="url(#scanlines)" />
+  <rect width="900" height="170" fill="url(#bgGrad)" />
+  <rect width="900" height="170" fill="url(#scanlines)" />
 
   <!-- ── WAVES: flat at top, flow curves hang downward ── -->
   <path class="wave1"
@@ -149,109 +132,66 @@
   <!-- ── BINARY SCATTER: all start at opacity 0, pulse up and back down ── -->
   <g font-family="'Courier New', monospace" font-size="13" fill="#a78bfa">
     <!-- Left edge cluster -->
-    <text class="b0"  x="18"  y="125">1</text>
-    <text class="b1"  x="35"  y="148">0</text>
-    <text class="b2"  x="52"  y="128">1</text>
-    <text class="b3"  x="22"  y="165">0</text>
-    <text class="b4"  x="68"  y="155">1</text>
-    <text class="b5"  x="42"  y="182">0</text>
-    <text class="b6"  x="80"  y="138">1</text>
-    <text class="b7"  x="15"  y="198">0</text>
-    <text class="b8"  x="58"  y="205">1</text>
+    <text class="b0"  x="18" y="112">1</text>
+    <text class="b1"  x="35" y="125">0</text>
+    <text class="b2"  x="52" y="114">1</text>
+    <text class="b3"  x="22" y="133">0</text>
+    <text class="b4"  x="68" y="128">1</text>
+    <text class="b5"  x="42" y="143">0</text>
+    <text class="b6"  x="80" y="119">1</text>
+    <text class="b7"  x="15" y="152">0</text>
+    <text class="b8"  x="58" y="156">1</text>
 
     <!-- Left-center cluster -->
-    <text class="b9"  x="142" y="115">0</text>
-    <text class="b10" x="162" y="138">1</text>
-    <text class="b11" x="128" y="162">0</text>
-    <text class="b12" x="175" y="178">1</text>
-    <text class="b13" x="115" y="195">0</text>
-    <text class="b14" x="155" y="210">1</text>
+    <text class="b9"  x="142" y="107">0</text>
+    <text class="b11" x="128" y="132">0</text>
+    <text class="b13" x="115" y="150">0</text>
 
     <!-- Center-left sparse -->
-    <text class="b15" x="250" y="125">1</text>
-    <text class="b16" x="268" y="152">0</text>
-    <text class="b17" x="238" y="178">1</text>
 
     <!-- Center-right sparse -->
-    <text class="b18" x="625" y="128">0</text>
-    <text class="b19" x="642" y="155">1</text>
-    <text class="b20" x="610" y="182">0</text>
 
     <!-- Right-center cluster -->
-    <text class="b21" x="718" y="118">1</text>
-    <text class="b22" x="735" y="142">0</text>
-    <text class="b23" x="705" y="168">1</text>
-    <text class="b24" x="748" y="188">0</text>
-    <text class="b25" x="722" y="208">1</text>
 
     <!-- Right edge cluster -->
-    <text class="b26" x="822" y="122">1</text>
-    <text class="b27" x="840" y="148">0</text>
-    <text class="b28" x="808" y="172">1</text>
-    <text class="b29" x="858" y="162">0</text>
-    <text class="b0"  x="875" y="138">1</text>
-    <text class="b1"  x="885" y="185">0</text>
+    <text class="b26" x="822" y="110">1</text>
+    <text class="b27" x="840" y="125">0</text>
+    <text class="b28" x="808" y="138">1</text>
+    <text class="b29" x="858" y="132">0</text>
+    <text class="b0"  x="875" y="119">1</text>
+    <text class="b1"  x="885" y="145">0</text>
   </g>
 
   <!-- ── CORNER BRACKETS ── -->
-  <path d="M20,265 L20,245 L40,245"    stroke="#8b5cf6" stroke-width="2"   fill="none" opacity="0.55" />
-  <path d="M880,265 L880,245 L860,245" stroke="#8b5cf6" stroke-width="2"   fill="none" opacity="0.55" />
-  <path d="M20,108 L20,125 L40,125"    stroke="#8b5cf6" stroke-width="1.5" fill="none" opacity="0.35" />
-  <path d="M880,108 L880,125 L860,125" stroke="#8b5cf6" stroke-width="1.5" fill="none" opacity="0.35" />
+  <path d="M20,160 L20,144 L40,144"    stroke="#8b5cf6" stroke-width="2"   fill="none" opacity="0.55" />
+  <path d="M880,160 L880,144 L860,144" stroke="#8b5cf6" stroke-width="2"   fill="none" opacity="0.55" />
+  <path d="M20,104 L20,118 L40,118"    stroke="#8b5cf6" stroke-width="1.5" fill="none" opacity="0.35" />
+  <path d="M880,104 L880,118 L860,118" stroke="#8b5cf6" stroke-width="1.5" fill="none" opacity="0.35" />
 
   <!-- ── LABELS ── -->
-  <text x="30" y="140"
+  <text x="160" y="118"
     font-family="'Courier New', 'Lucida Console', monospace"
     font-size="10" fill="#a78bfa" opacity="0.5">~/github/Err0ric  ·  last sync 2026-10-17</text>
 
-  <text x="800" y="140" font-family="'Courier New', monospace" font-size="9" fill="#a78bfa" text-anchor="end" opacity="0.4">v2026.10</text>
-  <circle class="dotpulse" cx="864" cy="136" r="4" fill="#8b5cf6" />
-  <text x="853" y="140"
+  <text x="690" y="118" font-family="'Courier New', monospace" font-size="9" fill="#a78bfa" text-anchor="end" opacity="0.4">v2026.10</text>
+  <circle class="dotpulse" cx="744" cy="114" r="4" fill="#8b5cf6" />
+  <text x="733" y="118"
     font-family="'Courier New', monospace"
     font-size="9" fill="#a78bfa" text-anchor="end" opacity="0.5">ONLINE</text>
 
   <!-- Divider -->
-  <line x1="20" y1="150" x2="880" y2="150" stroke="#3b1680" stroke-width="0.8" opacity="0.7" />
-
-  <!-- ── MAIN TITLE ── -->
-  <text x="450" y="206"
-    font-family="'Courier New', 'Lucida Console', monospace"
-    font-size="48" font-weight="700" letter-spacing="14"
-    text-anchor="middle"
-    fill="#8b5cf6" opacity="0.3"
-    filter="url(#textGlow)">ERR0RIC_</text>
-  <!-- Glitch layers (hidden except for brief flashes) -->
-  <text class="glitchA" x="446" y="203"
-    font-family="'Courier New', 'Lucida Console', monospace"
-    font-size="48" font-weight="700" letter-spacing="14"
-    text-anchor="middle" fill="#22d3ee" opacity="0">ERR0RIC_</text>
-  <text class="glitchB" x="454" y="205"
-    font-family="'Courier New', 'Lucida Console', monospace"
-    font-size="48" font-weight="700" letter-spacing="14"
-    text-anchor="middle" fill="#e879f9" opacity="0">ERR0RIC_</text>
-  <text class="title" x="450" y="204"
-    font-family="'Courier New', 'Lucida Console', monospace"
-    font-size="48" font-weight="700" letter-spacing="14"
-    text-anchor="middle"
-    fill="#ffffff"
-    filter="url(#textGlow)">ERR0RIC_</text>
-
-  <!-- Blinking cursor -->
-  <rect class="cursor" x="720" y="170" width="13" height="38" fill="#8b5cf6" rx="1" />
-
-  <!-- Accent line under title -->
-  <line x1="180" y1="222" x2="720" y2="222" stroke="#7c3aed" stroke-width="1" opacity="0.6" />
+  <line x1="150" y1="126" x2="750" y2="126" stroke="#3b1680" stroke-width="0.8" opacity="0.7" />
 
   <!-- ── SUBTITLE ── -->
-  <text class="subtitle" x="450" y="250"
+  <text class="subtitle" x="450" y="150"
     font-family="'Courier New', 'Lucida Console', monospace"
-    font-size="15" letter-spacing="4"
+    font-size="14" letter-spacing="4"
     text-anchor="middle"
     fill="#c4b5fd">InfoSec  ·  OSINT  ·  AI Security  ·  Always Building</text>
 
   <!-- ── BOTTOM ACCENT BAR ── -->
-  <rect x="0" y="267" width="900" height="13" fill="#7c3aed" opacity="0.95" />
-  <rect x="0" y="267" width="900" height="13" opacity="0.5">
+  <rect x="0" y="157" width="900" height="13" fill="#7c3aed" opacity="0.95" />
+  <rect x="0" y="157" width="900" height="13" opacity="0.5">
     <animate attributeName="fill"
       values="#8b5cf6;#a78bfa;#c4b5fd;#a78bfa;#8b5cf6"
       dur="3s" repeatCount="indefinite" />
