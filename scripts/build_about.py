@@ -31,7 +31,7 @@ LINES = [
     [("building:", "header")],
     [("  - ", "dash"), ("darkwire.tech", "url"), ("   cybersecurity news + CVE feed", "item")],
     [("  - ", "dash"), ("crawlr.lol", "url"), ("      OSINT platform", "item")],
-    [("  - ", "dash"), ("Remnant", "name"), ("         open-source LLM SIEM front end ", "item"), ("(WIP)", "wip")],
+    [("  - ", "dash"), ("Remnant", "name"), ("         self-hosted AI usage monitoring ", "item"), ("(WIP)", "wip")],
     [],
     [("focus:", "header")],
     [("  - ", "dash"), ("OSINT & digital forensics", "item")],

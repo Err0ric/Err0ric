@@ -30,10 +30,10 @@ PROJECTS = [
     {
         "slug": "remnant",
         "name": "Remnant",
-        "tag": "open-source LLM SIEM front end",
+        "tag": "self-hosted AI usage monitoring",
         "status": "BUILDING",
         "status_color": "#fbbf24",
-        "lang": "DuckDB · local LLMs",
+        "lang": "shadow AI · agents · MCP",
     },
 ]
 
