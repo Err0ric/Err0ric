@@ -21,7 +21,7 @@ from xml.sax.saxutils import escape
 TODAY = date.today().isoformat()
 
 LINES = [
-    [("err0ric", "user"), ("@", "sym"), ("kali", "host"), (":", "sym"), ("~", "path"), ("$ ", "sym"), ("cat about.txt", "cmd")],
+    [("err0ric", "user"), ("@", "sym"), ("toaster", "host"), (":", "sym"), ("~", "path"), ("$ ", "sym"), ("cat about.txt", "cmd")],
     [],
     [("handle:    ", "key"), ("Err0ric", "value")],
     [("location:  ", "key"), ("Pacific Northwest, USA", "value")],
@@ -44,7 +44,7 @@ LINES = [
     [("  - ", "dash"), ("CTF", "item")],
     [("  - ", "dash"), ("tinkering", "item")],
     [],
-    [("err0ric", "user"), ("@", "sym"), ("kali", "host"), (":", "sym"), ("~", "path"), ("$ ", "sym")],
+    [("err0ric", "user"), ("@", "sym"), ("toaster", "host"), (":", "sym"), ("~", "path"), ("$ ", "sym")],
 ]
 
 # ---------------------------------------------------------------- styling --
