@@ -8,4 +8,9 @@
   <img src="images/card_remnant.svg" width="32%" alt="Remnant" />
 </p>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Err0ric/Err0ric/output/github-contribution-grid-snake-dark.svg" />
+  <img src="https://raw.githubusercontent.com/Err0ric/Err0ric/output/github-contribution-grid-snake.svg" width="100%" alt="Contribution snake" />
+</picture>
+
 <img src="images/footer.svg" width="100%" alt="" />
