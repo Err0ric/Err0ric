@@ -29,25 +29,7 @@
 
   <style>
     /* Waves */
-    @keyframes wave1move {
-      0%   { d: path("M-100,0 L1000,0 L1000,55 Q850,85 700,60 Q550,35 400,70 Q250,100 100,65 Q0,45 -100,60 Z"); }
-      33%  { d: path("M-100,0 L1000,0 L1000,55 Q850,40 700,75 Q550,100 400,55 Q250,30 100,75 Q0,90 -100,55 Z"); }
-      66%  { d: path("M-100,0 L1000,0 L1000,55 Q850,70 700,45 Q550,20 400,60 Q250,88 100,50 Q0,35 -100,65 Z"); }
-      100% { d: path("M-100,0 L1000,0 L1000,55 Q850,85 700,60 Q550,35 400,70 Q250,100 100,65 Q0,45 -100,60 Z"); }
-    }
-    @keyframes wave2move {
-      0%   { d: path("M-100,0 L1000,0 L1000,45 Q850,75 700,48 Q550,22 400,58 Q250,85 100,52 Q0,35 -100,48 Z"); }
-      33%  { d: path("M-100,0 L1000,0 L1000,45 Q850,30 700,62 Q550,88 400,45 Q250,18 100,60 Q0,78 -100,42 Z"); }
-      66%  { d: path("M-100,0 L1000,0 L1000,45 Q850,60 700,35 Q550,12 400,50 Q250,75 100,38 Q0,22 -100,55 Z"); }
-      100% { d: path("M-100,0 L1000,0 L1000,45 Q850,75 700,48 Q550,22 400,58 Q250,85 100,52 Q0,35 -100,48 Z"); }
-    }
-    @keyframes wave3move {
-      0%   { d: path("M-100,0 L1000,0 L1000,35 Q850,62 700,38 Q550,14 400,45 Q250,72 100,40 Q0,25 -100,38 Z"); }
-      33%  { d: path("M-100,0 L1000,0 L1000,35 Q850,18 700,50 Q550,74 400,34 Q250,8  100,48 Q0,65 -100,30 Z"); }
-      66%  { d: path("M-100,0 L1000,0 L1000,35 Q850,50 700,25 Q550,2  400,40 Q250,65 100,28 Q0,12 -100,45 Z"); }
-      100% { d: path("M-100,0 L1000,0 L1000,35 Q850,62 700,38 Q550,14 400,45 Q250,72 100,40 Q0,25 -100,38 Z"); }
-    }
-
+            
     /* Binary: each char pulses between a clear visible opacity and fully transparent.
        Three variants so not every char pulses identically. */
     @keyframes binPulse {
@@ -72,10 +54,6 @@
     @keyframes cursorBlink  { 0%,49%{opacity:0.95} 50%,100%{opacity:0} }
     @keyframes pulseDot     { 0%,100%{opacity:0.8} 50%{opacity:0.2} }
     @keyframes subtitleFade { 0%,100%{opacity:0.85} 50%{opacity:0.55} }
-
-    .wave1 { animation: wave1move 7s   ease-in-out infinite; }
-    .wave2 { animation: wave2move 5.5s ease-in-out infinite; }
-    .wave3 { animation: wave3move 4.2s ease-in-out infinite; }
 
     /* Each char gets its own duration + delay so they feel independent */
     .b0  { animation: binPulse  3.1s ease-in-out infinite 0.0s; }
@@ -121,13 +99,19 @@
   <!-- ── WAVES: flat at top, flow curves hang downward ── -->
   <path class="wave1"
     d="M-100,0 L1000,0 L1000,55 Q850,85 700,60 Q550,35 400,70 Q250,100 100,65 Q0,45 -100,60 Z"
-    fill="url(#wave1Grad)" />
+    fill="url(#wave1Grad)">
+    <animate attributeName="d" dur="7s" repeatCount="indefinite" calcMode="spline" keyTimes="0.0;0.33;0.66;1.0" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" values="M-100,0 L1000,0 L1000,55 Q850,85 700,60 Q550,35 400,70 Q250,100 100,65 Q0,45 -100,60 Z;M-100,0 L1000,0 L1000,55 Q850,40 700,75 Q550,100 400,55 Q250,30 100,75 Q0,90 -100,55 Z;M-100,0 L1000,0 L1000,55 Q850,70 700,45 Q550,20 400,60 Q250,88 100,50 Q0,35 -100,65 Z;M-100,0 L1000,0 L1000,55 Q850,85 700,60 Q550,35 400,70 Q250,100 100,65 Q0,45 -100,60 Z" />
+  </path>
   <path class="wave2"
     d="M-100,0 L1000,0 L1000,45 Q850,75 700,48 Q550,22 400,58 Q250,85 100,52 Q0,35 -100,48 Z"
-    fill="url(#wave2Grad)" />
+    fill="url(#wave2Grad)">
+    <animate attributeName="d" dur="5.5s" repeatCount="indefinite" calcMode="spline" keyTimes="0.0;0.33;0.66;1.0" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" values="M-100,0 L1000,0 L1000,45 Q850,75 700,48 Q550,22 400,58 Q250,85 100,52 Q0,35 -100,48 Z;M-100,0 L1000,0 L1000,45 Q850,30 700,62 Q550,88 400,45 Q250,18 100,60 Q0,78 -100,42 Z;M-100,0 L1000,0 L1000,45 Q850,60 700,35 Q550,12 400,50 Q250,75 100,38 Q0,22 -100,55 Z;M-100,0 L1000,0 L1000,45 Q850,75 700,48 Q550,22 400,58 Q250,85 100,52 Q0,35 -100,48 Z" />
+  </path>
   <path class="wave3"
     d="M-100,0 L1000,0 L1000,35 Q850,62 700,38 Q550,14 400,45 Q250,72 100,40 Q0,25 -100,38 Z"
-    fill="url(#wave3Grad)" />
+    fill="url(#wave3Grad)">
+    <animate attributeName="d" dur="4.2s" repeatCount="indefinite" calcMode="spline" keyTimes="0.0;0.33;0.66;1.0" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" values="M-100,0 L1000,0 L1000,35 Q850,62 700,38 Q550,14 400,45 Q250,72 100,40 Q0,25 -100,38 Z;M-100,0 L1000,0 L1000,35 Q850,18 700,50 Q550,74 400,34 Q250,8  100,48 Q0,65 -100,30 Z;M-100,0 L1000,0 L1000,35 Q850,50 700,25 Q550,2  400,40 Q250,65 100,28 Q0,12 -100,45 Z;M-100,0 L1000,0 L1000,35 Q850,62 700,38 Q550,14 400,45 Q250,72 100,40 Q0,25 -100,38 Z" />
+  </path>
 
   <!-- ── BINARY SCATTER: all start at opacity 0, pulse up and back down ── -->
   <g font-family="'Courier New', monospace" font-size="13" fill="#a78bfa">
