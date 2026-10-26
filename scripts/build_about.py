@@ -29,6 +29,7 @@ LINES = [
     [("education: ", "key"), ("B.S. Cybersecurity (in progress)", "value")],
     [],
     [("building:", "header")],
+    [("  - ", "dash"), ("Lure", "url"), ("            AI agent attack harness (MITRE ATLAS)", "item")],
     [("  - ", "dash"), ("darkwire.tech", "url"), ("   cybersecurity news + CVE feed", "item")],
     [("  - ", "dash"), ("crawlr.lol", "url"), ("      OSINT platform", "item")],
     [("  - ", "dash"), ("Remnant", "name"), ("         self-hosted AI usage monitoring ", "item"), ("(WIP)", "wip")],

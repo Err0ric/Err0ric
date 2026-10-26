@@ -12,6 +12,21 @@ from xml.sax.saxutils import escape
 
 PROJECTS = [
     {
+        "slug": "lure",
+        "name": "Lure",
+        "tag": [
+            "Tests AI agents for prompt injection and tool abuse.",
+            "Isolated Docker sandbox, approval report, mapped to MITRE ATLAS.",
+        ],
+        "tag_size": 14,
+        "meta": "v1.14.3 · Apache-2.0",
+        "status": "FEATURED · OPEN SOURCE",
+        "status_color": "#34d399",
+        "lang": "Python · Docker · MITRE ATLAS + ATT&CK",
+        "width": 900,
+        "height": 140,
+    },
+    {
         "slug": "darkwire",
         "name": "darkwire.tech",
         "tag": "cybersecurity news + CVE feed",
@@ -37,12 +52,26 @@ PROJECTS = [
     },
 ]
 
-W, H = 290, 118
+CARD_W, CARD_H = 290, 118
 FONT = "'Courier New','Lucida Console',monospace"
 
 
 def card(p: dict) -> str:
     sc = p["status_color"]
+    W = p.get("width", CARD_W)  # the featured card spans the full row
+    H = p.get("height", CARD_H)
+    # tag is one line or a list of lines
+    lines = [p["tag"]] if isinstance(p["tag"], str) else p["tag"]
+    size = p.get("tag_size", 11)
+    tag = "\n".join(
+        f'<text x="18" y="{80 + i * round(size * 1.4)}" font-family="{FONT}" font-size="{size}" fill="#c4b5fd">{escape(t)}</text>'
+        for i, t in enumerate(lines)
+    )
+    meta = (
+        f'<text x="{W-36}" y="30" font-family="{FONT}" font-size="10" fill="#7c6aa8" '
+        f'letter-spacing="1.5" text-anchor="end">{escape(p["meta"])}</text>\n'
+        if "meta" in p else ""
+    )
     return f"""<svg width="{W}" height="{H}" viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2000/svg">
 <defs>
   <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -77,10 +106,10 @@ def card(p: dict) -> str:
 <!-- status -->
 <circle class="dot" cx="20" cy="26" r="4" fill="{sc}"/>
 <text x="30" y="30" font-family="{FONT}" font-size="10" fill="{sc}" letter-spacing="1.5">{escape(p['status'])}</text>
-<!-- name -->
+{meta}<!-- name -->
 <text x="18" y="60" font-family="{FONT}" font-size="19" font-weight="700" fill="#ffffff">{escape(p['name'])}</text>
 <!-- tagline -->
-<text x="18" y="80" font-family="{FONT}" font-size="11" fill="#c4b5fd">{escape(p['tag'])}</text>
+{tag}
 <!-- stack -->
 <text x="18" y="{H-18}" font-family="{FONT}" font-size="9.5" fill="#7c6aa8">{escape(p['lang'])}</text>
 <text x="{W-18}" y="{H-18}" font-family="{FONT}" font-size="9.5" fill="#7c6aa8" text-anchor="end">&gt;_</text>

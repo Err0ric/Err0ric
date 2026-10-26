@@ -155,7 +155,7 @@
   <!-- ── LABELS ── -->
   <text x="160" y="118"
     font-family="'Courier New', 'Lucida Console', monospace"
-    font-size="10" fill="#a78bfa" opacity="0.5">~/github/Err0ric  ·  last sync 2026-10-17</text>
+    font-size="10" fill="#a78bfa" opacity="0.5">~/github/Err0ric  ·  last sync 2026-10-25</text>
 
   <text x="690" y="118" font-family="'Courier New', monospace" font-size="9" fill="#a78bfa" text-anchor="end" opacity="0.4">v2026.10</text>
   <circle class="dotpulse" cx="744" cy="114" r="4" fill="#8b5cf6" />
